@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'basicapp/base.html' %}
+{% block body_block %}
+    <div class="container">
+
+
+      <form method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+    </div>
+{% endblock %}
